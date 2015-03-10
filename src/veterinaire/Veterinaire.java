@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package veterinaire;
 
-/**
- *
- * @author Arkesys
- */
+
 public class Veterinaire {
 
     /**
@@ -16,11 +8,24 @@ public class Veterinaire {
      */
     public static void main(String[] args) {
         
-        Animal monChat = new Chat();
-        
-        System.out.print(monChat.getNourriture());
-        System.out.println(monChat.seNourrir("s"));
-        
+       Animal monChat = new Chat();
+       Animal monChien = new Chien();
+       
+       Animal monChat2 = new Chat();
+       
+       monChat.dormir();
+       monChat.manger();
+       
+       monChat2.mangerDyna("");
+       monChien.dormir();
+       monChien.seMontrer();
+       
+       Veterinaire veto = new Veterinaire();       
+       veto.soigner(monChat);
     }
     
+    public void soigner(Animal a){
+        System.out.println("je soigne " + a.getClass());
+    }
+
 }

@@ -1,22 +1,22 @@
 package veterinaire;
 
 public class Chat extends Animal{
-    
-    //this.nourriture = "croquette";
-    
-   public Chat(){}
 
-   @Override
-   public String seNourrir(String nourriture){
-       return setNourriture("croquette");
-   }
-//public class Chat implements Animal{
+    @Override
+    public void dormir(){
+        System.out.println("je dors... 18h par jours");
+    }
     
-  /*  public void seNourrir(){
-        System.err.println("corquette");        
-    }*/
+    @Override
+    public void mangerDyna(String nourriture){
+        nourriture = "croquette";
+        super.mangerDyna(nourriture);
+        
+    }
 
-
-    
-    
+    @Override
+    void seMontrer() {
+        System.out.println("je suis un chat noir");
+    }
+        
 }
